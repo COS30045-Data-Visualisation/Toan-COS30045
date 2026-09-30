@@ -1,0 +1,151 @@
+/* 
+    filename: styles.css
+    
+    author: Toan Hoang
+
+    date created: September 30th, 2026
+
+    date modified: 
+
+    description: css style file for Appliance Energy Consumption Website - COS30045-Data Visualisation
+*/
+:root {
+    --brand: #F0A020;
+    --tint: #F8E098;         
+    --ink: #29100b; /*	Darker shade, for text, header and footer*/
+    --ink-soft: #c9a08f;
+    --contrast: #1F0322;
+    --paper: #e2dad4;
+    --font-base: Tahoma, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-base);
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+/* Logo on the left, nav on the right */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1.2rem;
+    background-color: var(--contrast);
+}
+
+body {
+    color: var(--ink);
+    background: var(--paper);
+}
+#logo {
+    height: 48px;
+    width: auto;
+    display: flex;
+}
+
+/* Horizontal menu */
+.menu {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+}
+
+.menu a { 
+    /* Select every anchor
+     */
+    display: block;
+    padding: 9px 12px;
+    font-size: 1.2rem; 
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 1s;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+    background-color: var(--tint);
+    color: var(--ink);
+}
+
+.menu a.active {
+    background: var(--tint);
+    color: var(--ink);
+    font-weight: bold;
+    border-bottom: 3px solid var(--brand);
+}
+/* Small screens: allow wrapping so links don't overflow */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 12px;
+    }
+    .menu {
+        gap: 4px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .menu a {
+        padding: 8px 10px;
+    }
+}
+/* Main */
+main {
+    max-width: 68.75rem; 
+    height: 100dvh;
+    margin: auto; 
+    padding: 1rem;
+}
+
+.intro { 
+    padding: 24px; 
+    background: var(--tint);
+    border-left: 6px solid var(--brand); 
+    border-radius: 6px;
+}
+
+.content h2 { 
+    border-bottom: 3px solid var(--brand); 
+    padding-bottom: 6px; 
+}
+
+.faq-item {
+    border: 1px solid var(--ink-soft);
+    border-radius: 6px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--ink);
+    background: var(--tint);
+    border: 0;
+    cursor: pointer;
+}
+
+.faq-question::after { content: "+"; }
+.faq-question.open::after { content: "-"; }
+.faq-question:hover { background: var(--brand); }
+
+.faq-answer { 
+    padding: 12px 16px; 
+}
+
+/* Footer */
+footer {
+    vertical-align: text-bottom;
+    padding: 16px 24px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--tint);
+    background: var(--contrast);
+}
