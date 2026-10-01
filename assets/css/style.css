@@ -27,7 +27,6 @@
   box-sizing: border-box;
 }
 
-/* Logo on the left, nav on the right */
 header {
     display: flex;
     align-items: center;
@@ -51,6 +50,13 @@ body {
     display: flex;
     gap: 8px;
     list-style: none;
+}
+
+#home{
+    background: var(--tint);
+    color: var(--ink);
+    font-weight: bold;
+    border-bottom: 3px solid var(--brand);
 }
 
 .menu a { 
