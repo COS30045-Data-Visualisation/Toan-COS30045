@@ -159,6 +159,7 @@ main {
     margin-top: 8px;
     font-size: 0.9rem;
     color: var(--ink);
+    text-align: center;
 }
 
 .note {
