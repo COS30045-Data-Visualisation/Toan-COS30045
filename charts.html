@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="COS30045 Web Project - Charts">
+	<meta name="keywords" content="COS30045, appliance energy, television, D3">
+	<meta name="author" content="Hoang Trong Toan, Toan Hoang">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Charts</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="pw_img">
+            <img id="logo" src="assets/images/PowerIcon.png" alt="Power logo">
+        </a>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="television.html">Application</a></li>
+                <li><a href="charts.html" class="active">Charts</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="house.html">SVG House</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Charts built with D3</h1>
+            <p>A set of charts drawn from the Energy Rating data using D3, each with labelled axes.</p>
+        </section>
+        <section class="content">
+            <h2>Which brands register the most TVs?</h2>
+            <p>Number of registered TV models for the 15 biggest brands (horizontal bar chart).</p>
+            <figure class="chart-box">
+                <div id="bar-chart" class="responsive-svg-container"></div>
+            </figure>
+        </section>
+        <section class="content">
+            <h2>Which screen technology uses the most energy?</h2>
+            <p>Mean annual energy use of 55 inch TVs by screen technology. Screens are only comparable at the same size, so one size is used here.</p>
+            <figure class="chart-box">
+                <div id="vbar-chart" class="responsive-svg-container"></div>
+            </figure>
+        </section>
+        <section class="content">
+            <h2>How does screen size change energy use?</h2>
+            <p>Mean annual energy use for every screen size from 24 to 98 inches. Each dot is a size and the line joins them.</p>
+            <figure class="chart-box">
+                <div id="line-chart" class="responsive-svg-container"></div>
+            </figure>
+        </section>
+        <section class="content">
+            <h2>How are TV models split by size?</h2>
+            <p>Share of registered models in the small, medium and large categories.</p>
+            <figure class="chart-box">
+                <div id="donut-chart" class="responsive-svg-container"></div>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Hoang Trong Toan.
+        Claude was used to help write and review the HTML, CSS and JavaScript on this site.</p>
+    </footer>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="assets/js/tv-data.js"></script>
+    <script src="assets/js/chart-utils.js"></script>
+    <script src="assets/js/bar-chart.js"></script>
+    <script src="assets/js/vertical-bar.js"></script>
+    <script src="assets/js/line-chart.js"></script>
+    <script src="assets/js/donut-chart.js"></script>
+    <script src="assets/js/time.js" defer></script>
+</body>
+
+</html>

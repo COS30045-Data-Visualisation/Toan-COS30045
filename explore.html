@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="COS30045 Web Project - Explore">
+	<meta name="keywords" content="COS30045, appliance energy, television, D3">
+	<meta name="author" content="Hoang Trong Toan, Toan Hoang">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Explore</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="pw_img">
+            <img id="logo" src="assets/images/PowerIcon.png" alt="Power logo">
+        </a>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="television.html">Application</a></li>
+                <li><a href="charts.html">Charts</a></li>
+                <li><a href="explore.html" class="active">Explore</a></li>
+                <li><a href="house.html">SVG House</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Explore energy use across TV models</h1>
+            <p>TVs vary considerably in energy consumption. Use the buttons to filter by screen technology and hover over a dot for model details.</p>
+        </section>
+        <section class="content">
+            <h2>Energy consumption of different TV screen types</h2>
+            <div id="filters_screen" class="filters" role="group" aria-label="Filter by screen technology"></div>
+            <figure class="chart-box">
+                <div id="histogram" class="responsive-svg-container"></div>
+                <figcaption>Figure 2. Number of TV models in each 200 kWh band.</figcaption>
+            </figure>
+            <figure class="chart-box">
+                <div id="scatterplot" class="responsive-svg-container"></div>
+                <figcaption>Figure 3. Energy consumption against star rating for every model, coloured by screen technology.</figcaption>
+            </figure>
+            <p class="note">Data source: Energy Rating Data for household appliances, Televisions (downloaded February 2026).</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Hoang Trong Toan.
+        Claude was used to help write and review the HTML, CSS and JavaScript on this site.</p>
+    </footer>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="assets/js/tv-data.js"></script>
+    <script src="assets/js/load-data.js"></script>
+    <script src="assets/js/shared-constants.js"></script>
+    <script src="assets/js/interactions.js"></script>
+    <script src="assets/js/histogram.js"></script>
+    <script src="assets/js/scatterplot.js"></script>
+    <script src="assets/js/time.js" defer></script>
+</body>
+
+</html>

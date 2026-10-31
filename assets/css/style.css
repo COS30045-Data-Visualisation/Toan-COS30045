@@ -178,3 +178,46 @@ footer {
     color: var(--tint);
     background: var(--contrast);
 }
+/* ---- Added: navigation, charts (Exercises 4-6) ---- */
+.menu a { font-size: 1rem; }
+.menu { flex-wrap: wrap; }
+.content, .content-faq { margin-top: 1.5rem; }
+.content p, .content-faq p, .intro p { margin-top: 0.6rem; }
+.takeaways { margin: 0.6rem 0 0 1.4rem; }
+
+.responsive-svg-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1200px;
+}
+.responsive-svg-container svg { width: 100%; height: auto; display: block; }
+.chart-box svg text { font-family: var(--font-base); font-size: 13px; fill: var(--ink); }
+.axis-label { font-size: 14px; font-weight: bold; }
+.bar { fill: var(--brand); }
+.bar:hover { opacity: 0.8; }
+.value-label { font-size: 12px; text-anchor: middle; }
+.line-path { fill: none; stroke: var(--contrast); stroke-width: 2.5; }
+.line-dot { fill: var(--brand); stroke: var(--contrast); }
+.legend-item text { font-size: 13px; }
+.chart-grid { display: grid; gap: 1.5rem; }
+.chart-box h3 { margin-bottom: 0.4rem; }
+.chart-box p.chart-desc { margin-bottom: 0.5rem; font-size: 0.95rem; }
+.house-box svg { max-width: 600px; margin: 0 auto; border: 1px solid var(--ink-soft); }
+
+/* chart styles (histogram, filters, scatterplot, tooltip) */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0.8rem 0; }
+.filter-btn {
+    padding: 8px 18px; border: 0; border-radius: 4px; cursor: pointer;
+    font-size: 1rem; color: #fff; background: #a85a00;
+}
+.filter-btn:hover, .filter-btn:focus-visible { background: var(--contrast); }
+.filter-btn.active { background: var(--tint); color: var(--ink); outline: 2px solid var(--brand); font-weight: bold; }
+.hist-bar { fill: #636466; stroke: var(--paper); }
+.hist-bar:hover { fill: var(--brand); }
+.dot { stroke: none; }
+.tooltip {
+    position: absolute; pointer-events: none; opacity: 0; z-index: 10;
+    padding: 6px 10px; font-size: 0.85rem; line-height: 1.3;
+    background: var(--contrast); color: #fff; border-radius: 4px;
+}

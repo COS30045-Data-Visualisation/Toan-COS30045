@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="COS30045 Web Project - SVG House">
+	<meta name="keywords" content="COS30045, appliance energy, television, D3">
+	<meta name="author" content="Hoang Trong Toan, Toan Hoang">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>SVG House</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="pw_img">
+            <img id="logo" src="assets/images/PowerIcon.png" alt="Power logo">
+        </a>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="television.html">Application</a></li>
+                <li><a href="charts.html">Charts</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="house.html" class="active">SVG House</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h1>Drawing with SVG shapes</h1>
+            <p>A house and garden drawn with every basic SVG shape, as practice for the D3 charts on this site.</p>
+        </section>
+        <section class="content">
+            <h2>The picture</h2>
+            <figure class="chart-box house-box">
+                <svg viewBox="0 0 600 400" role="img" aria-labelledby="house-title">
+                    <title id="house-title">A brown house with a roof, chimney, two windows and a door, a tree, a winding path and a sun</title>
+                    <rect x="0" y="0" width="600" height="400" fill="#87ceeb" />
+                    <rect x="0" y="270" width="600" height="130" fill="#008000" />
+                    <circle cx="520" cy="60" r="35" fill="#ffff00" />
+                    <ellipse cx="120" cy="70" rx="55" ry="22" fill="#ffffff" />
+                    <polyline points="400,50 410,40 420,50 430,40 440,50" fill="none" stroke="#333" stroke-width="2" />
+                    <line x1="0" y1="270" x2="600" y2="270" stroke="#064d06" stroke-width="3" />
+                    <rect x="200" y="160" width="200" height="130" fill="#8b3a1a" />
+                    <rect x="350" y="85" width="24" height="45" fill="#6b2a10" />
+                    <polygon points="180,160 300,70 420,160" fill="#cd853f" />
+                    <rect x="275" y="220" width="50" height="70" fill="#a0522d" />
+                    <circle cx="315" cy="255" r="3" fill="#000" />
+                    <g id="windows" fill="#a9d6e5" stroke="#ffffff" stroke-width="3">
+                        <rect x="215" y="185" width="45" height="40" />
+                        <rect x="215" y="185" width="45" height="40" transform="translate(125, 0)" />
+                    </g>
+                    <rect x="80" y="210" width="20" height="80" fill="#8b4513" />
+                    <g fill="#228b22">
+                        <circle cx="90" cy="195" r="26" />
+                        <circle cx="68" cy="205" r="20" />
+                        <circle cx="112" cy="205" r="20" />
+                    </g>
+                    <g fill="none" stroke="#f0a020" stroke-width="5">
+                        <path d="M290 290 C 250 320, 380 340, 300 400" />
+                        <path d="M312 290 C 280 320, 420 340, 340 400" />
+                    </g>
+                    <text x="410" y="245" font-size="22" fill="#000">House</text>
+                </svg>
+                <figcaption>Figure 4. A house built from rect, polygon, circle, ellipse, line, polyline, path and text elements.</figcaption>
+            </figure>
+        </section>
+        <section class="content">
+            <h2>How the coordinates work</h2>
+            <p>SVG puts the origin (0, 0) at the top-left corner. x grows to the right and y grows downwards. For example the line below is drawn with <code>x1="50" y1="40" x2="250" y2="120"</code>.</p>
+            <figure class="chart-box house-box">
+                <svg viewBox="0 0 320 160" role="img" aria-label="A line from point 50,40 to point 250,120 on an SVG canvas with its origin at the top left">
+                    <circle cx="0" cy="0" r="4" fill="#29100b" /><text x="8" y="14">(0, 0) origin</text>
+                    <line x1="50" y1="40" x2="250" y2="120" stroke="#F0A020" stroke-width="3" />
+                    <circle cx="50" cy="40" r="4" /><text x="58" y="36">(50, 40)</text>
+                    <circle cx="250" cy="120" r="4" /><text x="180" y="144">(250, 120)</text>
+                </svg>
+                <figcaption>Figure 5. Annotated SVG coordinate system.</figcaption>
+            </figure>
+            <p>The two windows sit inside one group, <code>&lt;g id="windows"&gt;</code>, so a single fill and stroke styles both. The second window reuses the first window's size and is moved with <code>transform="translate(125, 0)"</code>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Hoang Trong Toan.
+        Claude was used to help write and review the HTML, CSS and JavaScript on this site.</p>
+    </footer>
+    <script src="assets/js/time.js" defer></script>
+</body>
+
+</html>

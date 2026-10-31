@@ -5,75 +5,78 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="COS30045 Web Project - Television">
-	<meta name="keywords" content="Television, television, TV, tv">
+	<meta name="keywords" content="COS30045, appliance energy, television, D3">
 	<meta name="author" content="Hoang Trong Toan, Toan Hoang">
-    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 	<title>Television</title>
 </head>
+
 <body>
     <header>
         <a href="index.html" class="pw_img">
-            <img id="logo" src="assets\images\PowerIcon.png" alt="Power logo">
+            <img id="logo" src="assets/images/PowerIcon.png" alt="Power logo">
         </a>
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="television.html" class="active">Application</a></li>
+                <li><a href="charts.html">Charts</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="house.html">SVG House</a></li>
                 <li><a href="about.html">About Us</a></li>
             </ul>
         </nav>
     </header>
 
- 
     <main>
         <section class="intro">
             <h1>Is your TV quietly running up your power bill?</h1>
             <p>
-                Among Australian TVs registered in the 2026 Energy Rating data, a 
-                55 inch TV with a 1 star rating uses almost 1,000 kWh. But a model 
-                of the same size with 6 stars or more uses only about 300 kWh, that 
-                is more than 3 times the amount of energy and money saved.
+                Among Australian TVs registered in the 2026 Energy Rating data, a
+                typical 55 inch TV with a 1 star rating uses about 755 kWh a year.
+                A model of the same size with 6 stars or more uses only about
+                255 kWh. That is nearly 3 times the energy, and roughly $143 more
+                in electricity every year.
             </p>
         </section>
- 
+
         <section class="content">
             <h2>Why this matters</h2>
             <p>
-                Every television sold in Australia carries an Energy Rating Label. 
-                The label shows a star rating and an estimated number of kilowatt 
-                hours (kWh) used per year. The estimate comes from standardized 
-                testing that assumes the TV is on for 10 hours a day, so it is a 
+                Every television sold in Australia carries an Energy Rating Label.
+                The label shows a star rating and an estimated number of kilowatt
+                hours (kWh) used per year. The estimate comes from standardized
+                testing that assumes the TV is on for 10 hours a day, so it is a
                 way to compare models fairly, not a prediction of your own bill.
             </p>
             <p>
-                Multiply the kWh figure by your electricity tariff to estimate a 
-                yearly running cost. This page uses 28.55 cents per kWh, the 
-                average tariff quoted by the Energy Rating program. Your own 
+                Multiply the kWh figure by your electricity tariff to estimate a
+                yearly running cost. This page uses 28.55 cents per kWh, the
+                average tariff quoted by the Energy Rating program. Your own
                 tariff will differ, so check your bill.
             </p>
             <p>
-                The data covers more than 4,500 approved TV registrations from 79 
-                brands. Half of the models use less than 395 kWh a year, which is 
+                The data covers more than 4,500 approved TV models sold in Australia.
+                Half of the models use less than 397 kWh a year, which is
                 about $113 a year at that tariff.
             </p>
         </section>
- 
+
         <section class="content">
             <h2>How to read the chart</h2>
             <p>
-                Each bar represent the correspondent star rating and moving right 
-                means a larger star rating, and moving up means more electricity 
-                used per year. Each is categorized into small (less than 43"), 
-                medium (44" to 65") and large (bigger than 66").
+                Each group of bars is one star rating, and moving right means a
+                higher rating. The height of a bar is the median electricity used
+                per year, so moving up means more energy. Colour shows the screen
+                size category: small (43" or less), medium (44" to 65") and large
+                (66" or more). Hover over a bar to see its exact value.
             </p>
- 
+
             <figure class="chart-box">
-                <div id="chart">
-                    <img src="assets/images/StarRatingPowerConsumption.png">
-                </div>
+                <div id="chart" class="responsive-svg-container"></div>
                 <figcaption>
-                    Figure 1. Annual energy use (kWh per year) against star 
-                    rating for each category of TVs. Source: Australian Government 
+                    Figure 1. Median annual energy use (kWh per year) by star
+                    rating for small, medium and large TVs. Source: Australian Government
                     Energy Rating data, file dated 15 February 2026.
                 </figcaption>
             </figure>
@@ -81,33 +84,38 @@
         <section class="content">
             <h2>What this means when you buy a TV</h2>
             <p>
-                First decide how big a screen you really need, because size is the 
-                biggest driver of running cost. Then compare star ratings only between 
-                TVs of the same size, since that is where a higher rating translates 
-                directly into a lower bill. Finally, weigh the purchase price against 
-                the running cost over the years you will keep the TV. A TV that saves 
-                $74 a year pays back a higher price tag over a typical TV lifetime.
+                First decide how big a screen you really need, because size is the
+                biggest driver of running cost. Then compare star ratings only between
+                TVs of the same size, since that is where a higher rating translates
+                directly into a lower bill. For 51 to 55 inch TVs, models with 3.5
+                stars or fewer use a median of 513 kWh a year against 255 kWh for
+                6 stars or more, about $74 a year. Weigh the purchase price against
+                the running cost over the years you will keep the TV.
             </p>
             <p class="note">
-                Energy figures come from supplier-registered test results 
-                and use a standard 10 hours a day. Cost figures use 28.55 cents per 
+                Energy figures come from supplier-registered test results
+                and use a standard 10 hours a day. Cost figures use 28.55 cents per
                 kWh and your own use and tariff will differ.
             </p>
         </section>
- 
+
         <section class="content">
             <h2>Learn more</h2>
             <ul class="takeaways">
+                <li><a href="explore.html">Explore every TV model interactively</a></li>
                 <li><a href="https://www.data.gov.au/data/dataset/energy-rating-for-household-appliances" target="_blank" rel="noopener">Energy Rating Data for household appliances (data.gov.au)</a></li>
                 <li><a href="https://calculator.energyrating.gov.au/TVDetail.aspx" target="_blank" rel="noopener noreferrer">Energy Rating TV calculator (energyrating.gov.au)</a></li>
             </ul>
         </section>
     </main>
- 
     <footer>
         <p>&copy; <span id="year"></span> Hoang Trong Toan.
-        Claude was used to help write and review the HTML and CSS on this site.</p>
+        Claude was used to help write and review the HTML, CSS and JavaScript on this site.</p>
     </footer>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="assets/js/tv-data.js"></script>
+    <script src="assets/js/chart-utils.js"></script>
+    <script src="assets/js/story-chart.js"></script>
     <script src="assets/js/time.js" defer></script>
 </body>
 

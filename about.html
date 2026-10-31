@@ -13,12 +13,15 @@
 <body>
     <header>
         <a href="index.html" class="pw_img">
-            <img id="logo" src="assets\images\PowerIcon.png" alt="Power logo">
+            <img id="logo" src="assets/images/PowerIcon.png" alt="Power logo">
         </a>
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="television.html">Application</a></li>
+                <li><a href="charts.html">Charts</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="house.html">SVG House</a></li>
                 <li><a href="about.html" class="active">About Us</a></li>
             </ul>
         </nav>
@@ -30,9 +33,10 @@
                 of Technology. It turns the Australian Government's Energy Rating data 
                 into a story for households choosing a new TV: how star ratings, 
                 screen size and technology affect the yearly running cost.</p>
-            <p>The Home page gives context on appliance energy use in Australia, and 
-                the Televisions page presents the data and explains how to read the 
-                visualisation.</p>
+            <p>The Home page gives context on appliance energy use in Australia, the 
+                Application page tells the data story, the Charts and Explore pages let 
+                you look at the data in more detail, and the SVG House page shows the 
+                shapes used to build the charts.</p>
         </section>
         <section class="content">
             <h2>About me</h2>
@@ -50,12 +54,12 @@
 
         <section class="content">
             <h2>How it was built</h2>
-            <p>The pages use HTML, CSS and JavaScript, with the code and project notes kept in a GitHub repository. Generative AI (Claude) helped with writing and reviewing code and text, and I checked and edited the results. The README gives the full declaration.</p>
+            <p>The pages use HTML, CSS and JavaScript, with D3 for the charts. The code and project notes are kept in a GitHub repository. Generative AI (Claude) helped with writing and reviewing code and text, and I checked and edited the results. The README gives the full declaration.</p>
         </section>
     </main>
     <footer>
         <p>&copy; <span id="year"></span> Hoang Trong Toan.
-        Claude was used to help write and review the HTML and CSS on this site.</p>
+        Claude was used to help write and review the HTML, CSS and JavaScript on this site.</p>
     </footer>
     <script src="assets/js/time.js" defer></script>
 </body>
