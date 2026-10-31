@@ -5,7 +5,7 @@ loadTVData().then(tv => {
             d => Math.min(6, Math.floor(d.star)), d => d.sizeCategory),
         ([star, m]) => Array.from(m, ([size, median]) => ({ star, size, median: Math.round(median) }))
     ).flat();
-    const sizes = ["small", "medium", "large"];
+    const sizes = ["Small", "Medium", "Large"];
     const colours = d3.scaleOrdinal().domain(sizes).range(["#2a9d8f", "#F0A020", "#7a2e0e"]);
     const stars = [...new Set(data.map(d => d.star))].sort((a, b) => a - b);
     const { svg, inner, margin, innerWidth, innerHeight } =

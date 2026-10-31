@@ -21,7 +21,6 @@ const colorScale = d3.scaleOrdinal()
     .domain(["LED", "LCD", "OLED"])
     .range(["#1f77b4", "#d95f02", "#2ca02c"]);
 
-// Fixed 200 kWh bins (14 bins) so filtered data keeps the same bin edges
 const binGenerator = d3.bin()
     .value(d => d.energyConsumption)
     .domain([0, 2800])
