@@ -13,7 +13,7 @@ const loadTVData = () => d3.csv(TV_CSV).then(rows => rows
             screenTech: techOf(r.Screen_Tech),
             star: +r.Star2,
             energyConsumption: +r["Labelled energy consumption (kWh/year)"],
-            sizeCategory: size <= 43 ? "small" : size <= 65 ? "medium" : "large"
+            sizeCategory: size <= 43 ? "Small" : size <= 65 ? "Medium" : "Large"
         };
     })
     .filter(d => Number.isFinite(d.star) && Number.isFinite(d.energyConsumption) && Number.isFinite(d.screenSize)));

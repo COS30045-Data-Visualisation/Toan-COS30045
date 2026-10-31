@@ -1,4 +1,4 @@
-/* Exercise 5.1: vertical bar chart with axes - mean energy by screen tech (55 inch TVs) */
+/* vertical bar chart with axes - mean energy by screen tech (55 inch TVs) */
 const drawVerticalBar = data => {
     const { inner, margin, innerWidth, innerHeight } = makeChart("#vbar-chart", 1000, 500,
         { top: 40, right: 25, bottom: 50, left: 70 }, "Mean energy use of 55 inch TVs by screen technology");
